@@ -1,101 +1,135 @@
-from tkinter import*
-def semana ():
-    global nome
-    nome= str(input("digite o nome do cliente aqui pra que ele possa se cadastrar:"))
-    print(nome, "esta cadastrado em nosso sistema")
-    global semana
-    semana = str(input("coloque aqui a semana que o cliente quer deseja ser atendido s1,s2,s3,s4: "))
-    global dia
-    dia = str(input("qual o dia da semana q vc deseja ser atendido de: "))
-    if semana=="s1" and dia=="segunda":
-        d1= float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30,11:35/12:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d1, "horas de segunda feira")
-    elif semana=="s1" and dia=="terça":
-        d2=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d2, "horas de terça feira")
-    elif semana=="s1" and dia=="quarta":
-        d3=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d3, "horas de quarta feira")
-    elif semana=="s1" and dia=="quinta":
-        d4=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d4, "horas de quinta feria")
-    elif semana=="s1" and dia=="sexta":
-        d5=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d5, "horas de sexta feira")
-    elif semana=="s1" and dia=="sabado":
-        d6=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 16:55/17:25, 17:30/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d6, "horas de sabado")
-    elif semana=="s1" and dia=="domingo":
-        d7=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15"))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d7, "horas de domingo")                   
+                                             #Interface#
 
-    elif semana=="s2" and dia=="segunda":
-        d1= float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30,11:35/12:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d1, "horas")
-    elif semana=="s2" and dia=="terça":
-        d2=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d2, "horas")
-    elif semana=="s2" and dia=="quarta":
-        d3=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d3, "horas")
-    elif semana=="s2" and dia=="quinta":
-        d4=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d4, "horas")
-    elif semana=="s2" and dia=="sexta":
-        d5=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d5, "horas")
-    elif semana=="s2" and dia=="sabado":
-        d6=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 16:55/17:25, 17:30/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d6, "horas")
-    elif semana=="s2" and dia=="domingo":
-        d7=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15"))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d7, "horas")                   
+from tkinter import *
+import sqlite3
+janela = Tk()
+class Biblioteca(object):
+	def __init__(self,janela):
+                
+                
+		def login():
+                        
+			global fonte1,fonte2,lb,lb1,lb2,ed1,ed2,bt1,bt2
+			fonte1 = ("Verdana","20","bold")
+			fonte2 = ("Verdana","15","bold")
+			self.lb = Label(janela,text="BARBEARIA",font=fonte2)
+			self.lb1 = Label(janela,text="Usuário:",font=fonte2)
+			self.lb2 = Label(janela,text="Senha:",font=fonte2)
+			self.ed1 = Entry(janela,width=10,font=fonte2)
+			self.ed2 = Entry(janela,width=10,font=fonte2,show="*")
+			self.bt1 = Button(janela,text="Entrar",font=fonte2)
+			self.bt2 = Button(janela,text="Cadastrar",font=fonte2,command=cadastrando)
+			self.lb.grid(row=1,column=1)
+			self.lb1.grid(row=2,column=0)
+			self.lb2.grid(row=3,column=0)
+			self.ed1.grid(row=2,column=1)
+			self.ed2.grid(row=3,column=1)
+			self.bt1.grid(row=4,column=0)
+			self.bt2.grid(row=4,column=1)
+		def cadastro():
+			global fonte1,fonte2,lb,lb1,lb2,ed1,ed2,bt1,bt2,lb3
+			self.lb = Label(janela,text="CADASTRO",font=fonte2)
+			self.lb1 = Label(janela,text="Usuário:",font=fonte2)
+			self.lb2 = Label(janela,text="Senha:",font=fonte2)
+			self.ed1 = Entry(janela,width=10,font=fonte2)
+			self.ed2 = Entry(janela,width=10,font=fonte2,show="*")
+			self.lb3 = Label(janela,text="Idade:",font=fonte2)
+			self.bt1 = Button(janela,text="Cadastrar",font=fonte2,command=banco_dados)
+			self.bt2 = Button(janela,text="Voltar",font=fonte2,command=voltando)
+			self.ed3 = Entry(janela,width=10,font=fonte2)
+			self.lb.grid(row=1,column=1)
+			self.lb1.grid(row=2,column=0)
+			self.lb2.grid(row=3,column=0)
+			self.ed1.grid(row=2,column=1)
+			self.ed2.grid(row=3,column=1)
+			self.bt1.grid(row=5,column=0)
+			self.bt2.grid(row=5,column=1)
+			self.lb3.grid(row=4,column=0)
+			self.ed3.grid(row=4,column=1)
+		def destruir_login():
+			global fonte1,fonte2,lb,lb1,lb2,ed1,ed2,bt1,bt2
+			self.lb.destroy()
+			self.lb1.destroy()
+			self.lb2.destroy()
+			self.ed1.destroy()
+			self.ed2.destroy()
+			self.bt1.destroy()
+			self.bt2.destroy()
+		def destruir_cadastro():
+			global fonte1,fonte2,lb,lb1,lb2,ed1,ed2,bt1,bt2,lb3,ed3
+			self.lb.destroy()
+			self.lb1.destroy()
+			self.lb2.destroy()
+			self.ed1.destroy()
+			self.ed2.destroy()
+			self.bt1.destroy()
+			self.bt2.destroy()
+			self.ed3.destroy()
+			self.lb3.destroy()
+			
+		def cadastrando():
 
-    elif semana=="s3" and dia=="segunda":
-        d1= float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30,11:35/12:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d1, "horas")
-    elif semana=="s3" and dia=="terça":
-        d2=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d2, "horas")
-    elif semana=="s3" and dia=="quarta":
-        d3=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d3, "horas")
-    elif semana=="s3" and dia=="quinta":
-        d4=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d4, "horas")
-    elif semana=="s3" and dia=="sexta":
-        d5=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d5, "horas")
-    elif semana=="s3" and dia=="sabado":
-        d6=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 16:55/17:25, 17:30/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d6, "horas")
-    elif semana=="s3" and dia=="domingo":
-        d7=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15"))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d7, "horas")
-        
-    elif semana=="s4" and dia=="segunda":
-        d1= float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30,11:35/12:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d1, "horas")
-    elif semana=="s4" and dia=="terça":
-        d2=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d2, "horas")
-    elif semana=="s4" and dia=="quarta":
-        d3=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d3, "horas")
-    elif semana=="s4" and dia=="quinta":
-        d4=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d4, "horas")
-    elif semana=="s4" and dia=="sexta":
-        d5=float(input("apartir de qual a hora q o cliente deseja ser atendido : 8:00/8:30, 8:35/9:05, 9:10/9:40, 9:45/10:15, 10:20/10:50, 11:00/11:30, 11:35/12:00, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 17:00/17:30, 17:35/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d5, "horas")
-    elif semana=="s4" and dia=="sabado":
-        d6=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15, 14:00/14:30, 14:35/15:05, 15:10/15:40, 15:45/16:15, 16:20/16:50, 16:55/17:25, 17:30/18:00 "))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d6, "horas")
-    elif semana=="s4" and dia=="domingo":
-        d7=float(input("apartir de qual a hora q o cliente deseja ser atendido : 7:00/7:30, 7:35/8:05, 8:10/8:40, 8:45/9:15, 9:20/9:50, 10:00/10:30, 10:35/11:05, 11:10/11:40, 11:45/12:15"))
-        print("o cliente:",nome,"esta com serviço marcado para apartir de:", d7, "horas")  
-janela= Tk()
-bt= Button(janela,width=20, text="clique para se cadastrar", command=semana )
-bt.place(x=100, y=100)
-janela.geometry("300x300+150+150")
+			destruir_login()
+			cadastro()
+		def voltando():
+                        
+			destruir_cadastro()
+			login()
+		def banco_dados():
+			global fonte1,fonte2,lb,lb1,lb2,ed1,ed2,bt1,bt2,ed3,lb3
+			conn = sqlite3.connect('cadastro.db')
+			cursor = conn.cursor()
+			usuario = self.ed1.get()
+			senha = self.ed2.get()
+			idade = self.ed3.get()
+			cursor.execute("""INSERT INTO clientes (usuario,senha,idade)VALUES(?,?,?)""",(usuario,senha,idade))
+			conn.commit()
+			self.lb3 = Label(janela,text="Cliente cadastrado",font=("Verdana","13","bold"))
+			self.lb3.grid(row=6,column=0)
+			conn.close()
+			
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		login()
+janela.resizable(False,False)
+janela.title("BARBEARIA")
+janela.geometry("+700+300")
+Biblioteca(janela)
 janela.mainloop()
+
+                                        #Banco de dados#
+
+import sqlite3
+
+# conectando...
+conn = sqlite3.connect('cadastro.db')
+# definindo um cursor
+cursor = conn.cursor()
+
+# criando a tabela (schema)
+cursor.execute("""
+CREATE TABLE clientes (
+        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        usuario TEXT NOT NULL,
+        
+        senha     VARCHAR(11) NOT NULL,
+        idade     VARCHAR(2) NOT NULL
+       
+        
+);
+""")
+
+print('Tabela criada com sucesso.')
+# desconectando...
+conn.close()
