@@ -16,6 +16,7 @@ def tela_principal():
     bt1 = Button(janela,text="Agendar",font=fonte,command=agendar)
     bt2 = Button(janela,text="Ver Reservas",font=fonte,command=ver_reservas)
     
+
     lb.grid(row=0,column=0,columnspan=2)
     nome.grid(row=1,column=0)
     nome2.grid(row=1,column=1)
