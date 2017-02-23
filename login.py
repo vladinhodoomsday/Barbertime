@@ -65,6 +65,15 @@ def cadastrando_banco():
     if "" in lista:
         lb3 = Label(janela,text="Informe todos os valores",font=fonte1,fg="red")
         lb3.grid(row=4,column=0,columnspan=2)
+    elif len(usuario)>9 or len(senha)>8:
+        lb3.destroy()
+        lb3 = Label(janela,text="8 dígitos no máximo",font=fonte1,fg="red")
+        lb3.grid(row=4,column=0,columnspan=2)
+    elif len(usuario)<5 or len(senha)<5:
+        lb3.destroy()
+        lb3 = Label(janela,text="5 dígitos no mínimo",font=fonte1,fg="red")
+        lb3.grid(row=4,column=0,columnspan=2)
+        
         
     else:
         cursor.execute("INSERT INTO clientes (usuario,senha)VALUES(?,?)",(usuario,senha))
@@ -85,6 +94,14 @@ def validando_conta():
     if "" in lista:
         lb3 = Label(janela,text="Informe todos os valores",font=fonte1,fg="red")
         lb3.grid(row=4,column=0,columnspan=2)
+    elif len(usuario)>9 or len(senha)>8:
+        lb3.destroy()
+        lb3 = Label(janela,text="8 dígitos no máximo",font=fonte1,fg="red")
+        lb3.grid(row=4,column=0,columnspan=2)
+    elif len(usuario)<5 or len(senha)<5:
+        lb3.destroy()
+        lb3 = Label(janela,text="5 dígitos no mínimo",font=fonte1,fg="red")
+        lb3.grid(row=4,column=0,columnspan=2)
     else:
         cursor.execute("""SELECT usuario,senha FROM clientes;""")
         for linha in cursor.fetchall():
@@ -100,7 +117,15 @@ def validando_conta():
             lb3.destroy()
             lb3 = Label(janela,text="Conta inválida",font=fonte1,fg="red")
             lb3.grid(row=4,column=0,columnspan=2)
-            
+        
+                
+        
+    
+    
+    
+    
+    
+    
 global fonte1,lb,lb1,lb2,lb3,ed1,ed2,bt1,bt2   
 janela = Tk()
 fonte1 = ("Arial","15","bold")
@@ -122,5 +147,5 @@ bt1.grid(row=3,column=0)
 bt2.grid(row=3,column=1)
 janela.title("Barbearia")
 janela.geometry("+600+300")
-janela["bg"]= "pink"
+
 janela.mainloop()
